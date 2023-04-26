@@ -121,7 +121,7 @@ public class MyArrayList<T> implements MyList {
         return a.compareTo(o);
     }
 
-    private void resize(){
+    private void resize(){//doubles the size of the array when it is full
         arraySize *= 2;
         Object[] increasedList = new Object[arraySize];
         for (int i = 0; i < size; i++){
