@@ -6,7 +6,7 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
     public static class Node<T>{
         T value;
         Node next;
-        public Node(T.value){
+        public Node(T value){
             this.value = value;
             this.next = null;
         }
@@ -18,7 +18,7 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
     }
 
     public MyLinkedList(T value){
-        Node newNode = new Node(value);
+        Node newNode = new NodeBuilder().createNode();
         head = newNode;
         tail = newNode;
         size = 1;
@@ -43,7 +43,7 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
 
     @Override
     public void add(Object item) {
-        Node<T> newNode = new Node<>((T) item);
+        Node<T> newNode = new NodeBuilder().createNode();
 
         if (head == null){
             head = newNode;
@@ -64,7 +64,7 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
             throw new IndexOutOfBoundsException();
         }
 
-        Node<T> newNode = new Node<>((T) item);
+        Node<T> newNode = new NodeBuilder().createNode();
 
         if(index==0){
             newNode.next = head;
@@ -106,7 +106,56 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
         return false;
     }
 
+    @Override
+    public Object remove(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
 
+        T removedItem;
+        if(index == 0) {
+        removedItem = (T) head.value;
+        head = head.next;
+        }
+        else{
+            Node<T> current = head;
+            for(int i = 0; i < index - 1; i++) {
+                current = current.next;
+            }
+            removedItem = (T) current.next.value;
+            current = current.next;
+        }
+        removedItem = (T) current.next.value;
+        current.next = current.next.next;
+    }
+    size--;
+    return removedItem;
+
+
+    @Override
+    public void clear() {
+
+    }
+
+    @Override
+    public Object get(int index) {
+        return null;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public int lastIndexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public void sort() {
+
+    }
 
 
 }
