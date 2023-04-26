@@ -29,10 +29,16 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
         return size;
     }
     public boolean add(T element){
-        Node newNode = new Node(element, null tail);
+        Node newNode = new Node(element, null, tail);
         if(size==0){
-            head
+            head == newNode;
+        } else{
+            tail.next = newNode;
         }
+        tail = newNode;
+        size++;
+        return true;
+
     }
 
     @Override
