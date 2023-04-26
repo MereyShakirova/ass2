@@ -9,8 +9,7 @@
 ## Main.java:
 ### Definition:
 In Main class I tested the code with different way, like remove, add and so on to prove the code 
-#### There is test code:        
-        import org.w3c.dom.Node;
+#### There is test code:
         import java.util.*;
         public class Main {
             public static void main(String[] args) {
@@ -77,7 +76,6 @@ default_capacity - a constant integer that represents the default size of the ar
     
 #### There is the solution code:
     import java.util.Arrays;
-    import java.util.Collections;
 
     public class MyArrayList<T> implements MyList {
     
