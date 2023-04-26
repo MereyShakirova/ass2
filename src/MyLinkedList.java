@@ -154,7 +154,7 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
         Node<T> current = head;
         int index = 0;
         while(current != null) {
-            if(current.value.equals(0)){
+            if(current.value.equals(o)){
                 return index;
             }
             current = current.next;
