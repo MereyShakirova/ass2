@@ -165,7 +165,17 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        Node<T> current = head;
+        int index = -1;
+        int i = 0;
+        while(current != null){
+            if(current.value.equals(o)){
+                index = i;
+            }
+            current = current.next;
+            i++;
+        }
+        return index;
     }
 
     @Override
