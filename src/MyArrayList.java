@@ -1,5 +1,3 @@
-import java.util.Arrays;
-import java.util.Collections;
 public class MyArrayList<T> implements  MyList {
     private T[] list;
     private int size;
@@ -37,6 +35,29 @@ public class MyArrayList<T> implements  MyList {
         if(index<0) return false;
         remove(index);
         return true;
+    }
+    public Object remove(int index){
+        if(index < 0) return null;
+        Object removedItem = list[index];
+        for(int i = index; i < size; i++){
+            list[i] = list[i+1];
+        }
+        size--;
+        return removedItem;
+    }
+    public void clear() {
+        list = (T[]) new Object[default_capacity];
+        size = 0;
+    }
+    public Object get(int index){return list[index];}
+    public int indexOf(Object o){
+        if(o == null) return -1;
+        for(int i = 0; i < size; i++){
+            if(o.equals(list[i])){
+                return i;
+            }
+        }
+        return -1;
     }
 
 }
