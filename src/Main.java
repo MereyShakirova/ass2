@@ -2,7 +2,7 @@ import org.w3c.dom.Node;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         /*MyArrayList<Integer> myArrayList = new MyArrayList<>();
         myArrayList.add(45);
         myArrayList.add(46);
