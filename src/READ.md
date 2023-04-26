@@ -402,7 +402,11 @@ default_capacity - a constant integer that represents the default size of the ar
         }
 
 
-## MyList.java;
+## MyList.java:
+### Definition:
+The MyList interface defines a set of generic methods that can be used to manipulate a list of elements. The generic type parameter T specifies the type of elements that the list can contain
+
+### There is interface code:
         public interface MyList<T> {
             int size();
             boolean contains(Object o);
