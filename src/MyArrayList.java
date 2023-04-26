@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Collections;
 
 public class MyArrayList<T> implements MyList {
 
@@ -18,8 +17,11 @@ public class MyArrayList<T> implements MyList {
          list = (T[]) (new Object[capacity]);
      }
     }
+
     @Override
-    public int size(){return size;}
+    public int size(){
+        return size;
+    }
 
     @Override
     public boolean contains(Object o){
@@ -31,6 +33,7 @@ public class MyArrayList<T> implements MyList {
         }
         return false;
     }
+
     @Override
     public void add(Object item){
         if(size == arraySize){
@@ -38,6 +41,7 @@ public class MyArrayList<T> implements MyList {
         }
         list[size++] = (T) item;
     }
+
     @Override
     public void add(Object item, int index) {
         if(size == arraySize){
@@ -49,6 +53,7 @@ public class MyArrayList<T> implements MyList {
         list[index] = (T) item;
         size++;
     }
+
     @Override
     public boolean remove(Object item){
         if(item == null) return false;
@@ -57,6 +62,7 @@ public class MyArrayList<T> implements MyList {
         remove(index);
         return true;
     }
+
     @Override
     public Object remove(int index){
         if(index < 0) return null;
@@ -67,13 +73,18 @@ public class MyArrayList<T> implements MyList {
         size--;
         return removedItem;
     }
+
     @Override
     public void clear() {
         list = (T[]) new Object[default_capacity];
         size = 0;
     }
+
     @Override
-    public Object get(int index){return list[index];}
+    public Object get(int index){
+        return list[index];
+    }
+
     @Override
     public int indexOf(Object o){
         if(o == null) return -1;
@@ -84,6 +95,7 @@ public class MyArrayList<T> implements MyList {
         }
         return -1;
     }
+
     @Override
     public int lastIndexOf(Object o) {
         int index = -1;
@@ -95,10 +107,15 @@ public class MyArrayList<T> implements MyList {
         }
         return index;
     }
+
     @Override
     public void sort(){
-        Arrays.sort(list, 0, size);}
-    public <T extends Comparable<T>> int compare(T a, T o){return a.compareTo(o);}
+        Arrays.sort(list, 0, size);
+    }
+    public <T extends Comparable<T>> int compare(T a, T o){
+        return a.compareTo(o);
+    }
+
     private void resize(){
         arraySize *= 2;
         Object[] increasedList = new Object[arraySize];
@@ -107,8 +124,12 @@ public class MyArrayList<T> implements MyList {
         }
         list = (T[]) increasedList;
     }
+
+
     @Override
-    public String toString() { return Arrays.toString(Arrays.copyOf(list, size));}
+    public String toString() {
+        return Arrays.toString(Arrays.copyOf(list, size));
+    }
 }
 
 

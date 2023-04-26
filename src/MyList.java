@@ -8,4 +8,9 @@ public interface MyList<T> {
     void clear();
     T get(int index);
 
+    int indexOf(Object o);
+
+    int lastIndexOf(Object o);
+
+    void sort();
 }
