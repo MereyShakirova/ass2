@@ -26,6 +26,7 @@ public class Main {
         num.add(4);
         num.add(7);
         num.add(100);
+        num.add(96);
         num.add(2,5);
         num.remove(0);
         System.out.println(num.contains(35));
