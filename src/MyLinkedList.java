@@ -180,6 +180,20 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
 
     @Override
     public void sort() {
+        boolean swapped;
+        Node<T> current;
+        Node<T> last = null;
+
+        if(head == null){
+            return;
+        }
+
+        do{
+            swapped = false;
+            current = head;
+
+            while()
+        }
 
     }
 

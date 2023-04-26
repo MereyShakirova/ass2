@@ -1,11 +1,16 @@
+
+    //list: an array of type T that stores the elements of the list;
+    //size: an integer that represents the current number of elements in the list;
+    //arraySize: an integer that represents the current size of the array;
+    //default_capacity: a constant integer that represents the default size of the array if no capacity is specified;
 import java.util.Arrays;
 
 public class MyArrayList<T> implements MyList {
 
-    private T[] list;
-    private int size;
+    private T[] list;//an array of type T that stores the elements of the list
+    private int size;//an integer that represents the current number of elements in the list
     private int arraySize = 5;
-    private final int default_capacity = 5;
+    private final int default_capacity = 5;//a constant integer that represents the default size of the array if no capacity is specified
 
     public MyArrayList() {
         list = (T[]) new Object[default_capacity];
@@ -19,12 +24,12 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
-    public int size(){
+    public int size(){//returns the size of the list
         return size;
     }
 
     @Override
-    public boolean contains(Object o){
+    public boolean contains(Object o){//returns a boolean value indicating whether the specified element is in the list
         if(o==null) return false;
         for(int i=0; i<size; i++){
             if(list[i].equals(o)) {
@@ -35,7 +40,7 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
-    public void add(Object item){
+    public void add(Object item){//adds an element to the end of the list
         if(size == arraySize){
             resize();
         }
@@ -43,7 +48,7 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
-    public void add(Object item, int index) {
+    public void add(Object item, int index) {//adds an element at the specified index in the list
         if(size == arraySize){
             resize();
         }
@@ -55,7 +60,7 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
-    public boolean remove(Object item){
+    public boolean remove(Object item){//removes the first occurrence of the specified element from the list
         if(item == null) return false;
         int index = indexOf(item);
         if(index<0) return false;
@@ -64,7 +69,7 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
-    public Object remove(int index){
+    public Object remove(int index){//removes the element at the specified index from the list
         if(index < 0) return null;
         Object removedItem = list[index];
         for(int i = index; i < size; i++){
@@ -75,18 +80,18 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
-    public void clear() {
+    public void clear() {//removes all elements from the list
         list = (T[]) new Object[default_capacity];
         size = 0;
     }
 
     @Override
-    public Object get(int index){
+    public Object get(int index){//returns the element at the specified index in the list
         return list[index];
     }
 
     @Override
-    public int indexOf(Object o){
+    public int indexOf(Object o){//returns the index of the first occurrence of the specified element in the list, or -1 if the element is not in the list
         if(o == null) return -1;
         for(int i = 0; i < size; i++){
             if(o.equals(list[i])){
@@ -97,7 +102,7 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
-    public int lastIndexOf(Object o) {
+    public int lastIndexOf(Object o) {//returns the index of the last occurrence of the specified element in the list, or -1 if the element is not in the list
         int index = -1;
         if (o == null) return -1;
         for (int i = 0; i < size; i++) {
@@ -109,10 +114,10 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
-    public void sort(){
+    public void sort(){//sorts the elements of the list in ascending order using the natural ordering of the elements. The elements must implement the Comparable interface.
         Arrays.sort(list, 0, size);
     }
-    public <T extends Comparable<T>> int compare(T a, T o){
+    public <T extends Comparable<T>> int compare(T a, T o){// a private method used by the sort() method to compare two elements.
         return a.compareTo(o);
     }
 
