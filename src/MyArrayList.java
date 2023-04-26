@@ -12,7 +12,7 @@ public class MyArrayList<T> implements MyList {
     }
     public MyArrayList(int capacity){
      if(capacity <= 0) {
-         throw new IllegalArgumentException(("Capacity can not be less or equal to zero"));
+         throw new IllegalArgumentException(("Capacity can not be less or equal to zero."));
      } else{
          list = (T[]) (new Object[capacity]);
      }
