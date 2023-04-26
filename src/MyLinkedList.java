@@ -1,3 +1,6 @@
+    //head - variable is a reference to the first node in the list
+    // size -  integer that keeps track of the number of elements in the list
+
 public class MyLinkedList<T extends  Comparable<T>> implements MyList {
 
     private Node head;

@@ -4,6 +4,7 @@
     //arraySize: an integer that represents the current size of the array;
     //default_capacity: a constant integer that represents the default size of the array if no capacity is specified;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class MyArrayList<T> implements MyList {
 
