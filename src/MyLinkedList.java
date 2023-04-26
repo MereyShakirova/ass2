@@ -28,18 +28,6 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
     public int size(){
         return size;
     }
-    public boolean add(T element){
-        Node newNode = new Node(element, null, tail);
-        if(size==0){
-            head == newNode;
-        } else{
-            tail.next = newNode;
-        }
-        tail = newNode;
-        size++;
-        return true;
-
-    }
 
     @Override
     public boolean contains(Object o) {
@@ -163,7 +151,16 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        Node<T> current = head;
+        int index = 0;
+        while(current != null) {
+            if(current.value.equals(0)){
+                return index;
+            }
+            current = current.next;
+            index++;
+        }
+        return -1;
     }
 
     @Override
