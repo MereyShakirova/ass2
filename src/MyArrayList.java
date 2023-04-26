@@ -1,20 +1,27 @@
 import java.util.Arrays;
 import java.util.Collections;
+
 public class MyArrayList<T> implements MyList {
+
     private T[] list;
     private int size;
     private int arraySize = 5;
     private final int default_capacity = 5;
-    public MyArrayList() {list = (T[]) new Object[default_capacity];}
+
+    public MyArrayList() {
+        list = (T[]) new Object[default_capacity];
+    }
     public MyArrayList(int capacity){
      if(capacity <= 0) {
          throw new IllegalArgumentException(("Capacity can not be less or equal to zero"));
-     }
-     else{
+     } else{
          list = (T[]) (new Object[capacity]);
      }
     }
+    @Override
     public int size(){return size;}
+
+    @Override
     public boolean contains(Object o){
         if(o==null) return false;
         for(int i=0; i<size; i++){
@@ -23,6 +30,13 @@ public class MyArrayList<T> implements MyList {
             }
         }
         return false;
+    }
+    @Override
+    public void add(Object item){
+        if(size == arraySize){
+            resize();
+        }
+        list[size++] = (T) item;
     }
     @Override
     public void add(Object item, int index) {
@@ -43,6 +57,7 @@ public class MyArrayList<T> implements MyList {
         remove(index);
         return true;
     }
+    @Override
     public Object remove(int index){
         if(index < 0) return null;
         Object removedItem = list[index];
@@ -52,11 +67,14 @@ public class MyArrayList<T> implements MyList {
         size--;
         return removedItem;
     }
+    @Override
     public void clear() {
         list = (T[]) new Object[default_capacity];
         size = 0;
     }
+    @Override
     public Object get(int index){return list[index];}
+    @Override
     public int indexOf(Object o){
         if(o == null) return -1;
         for(int i = 0; i < size; i++){
@@ -66,6 +84,7 @@ public class MyArrayList<T> implements MyList {
         }
         return -1;
     }
+    @Override
     public int lastIndexOf(Object o) {
         int index = -1;
         if (o == null) return -1;
@@ -76,9 +95,9 @@ public class MyArrayList<T> implements MyList {
         }
         return index;
     }
+    @Override
     public void sort(){
         Arrays.sort(list, 0, size);}
-
     public <T extends Comparable<T>> int compare(T a, T o){return a.compareTo(o);}
     private void resize(){
         arraySize *= 2;
@@ -88,6 +107,7 @@ public class MyArrayList<T> implements MyList {
         }
         list = (T[]) increasedList;
     }
+    @Override
     public String toString() { return Arrays.toString(Arrays.copyOf(list, size));}
 }
 

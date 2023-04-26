@@ -47,6 +47,26 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
         }
         size++;
     }
+    @Override
+    public void add(Object item, int index){
+        if(index < 0 || index > size){
+            throw new IndexOutOfBoundsException();
+        }
+        Node<T> newNode = new Node<>((T) item);
+        if(index==0){
+            newNode.next = head;
+            head = newNode;
+        }
+        else{
+            Node<T> current = head;
+            for(int i = 0; i < index-1; i++){
+                current=current.next;
+            }
+            newNode.next  = current.next;
+            current.next = newNode;
+        }
+        size++;
+    }
 
 
 
