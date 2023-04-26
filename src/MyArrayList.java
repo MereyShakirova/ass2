@@ -25,6 +25,12 @@ public class MyArrayList<T> implements  MyList {
         }
         return false;
     }
+
+    @Override
+    public void add(Object item) {
+
+    }
+
     public  void add(Object item, int index){
         if(size == arraySize){
             resize();

@@ -14,6 +14,15 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
         this.head = null;
         this.size = 0;
     }
+    public MyLinkedList(T value){
+        Node newNode = new Node(value);
+        head = newNode;
+        tail = newNode;
+        size = 1;
+    }
+    public int size(){return size;}
+
+
 
 
 }
