@@ -1,12 +1,13 @@
-# Assignment 2 for the Algorithm Data Structure
+# Assignment 2 for laboratory work for the Algorithm Data Structure
+![Assignment 2](https://avatars.mds.yandex.net/i?id=85c7a1aec44a18feaf285883e555bc5800eb8003-8496986-images-thumbs&n=13)
 ### Task:
-    In this reprository, We needed to create the MyArrayList and MyLinkedList classes, which are implementations of ArrayList and LinkedList, respectively.
-####  Description:
+    In this reprository, we needed to create the MyArrayList and MyLinkedList classes, which are implementations of ArrayList and LinkedList, respectively.
+#### !Description!:
     Do not use java.util.ArrayList and java.util.LinkedList!
 
 ## Main.java
 ## MyArrayList.java:
-    In MyArrayList, the following tasks had to be done:
+    @ In MyArrayList, the following tasks had to be done:
 
         1.Create a new class named MyArrayList that implements the List interface.
         2.Define a private instance variable of type Object[] to store the elements of the list.
@@ -17,6 +18,14 @@
         7.Implement the size() method by returning the variable size.
         8.Implement any other methods specified in the List interface.
         9.Test all methods of MyArrayList.
+     
+    @ The class has the following instance variables:
+
+        list: an array of type T that stores the elements of the list;
+        size: an integer that represents the current number of elements in the list;
+        arraySize: an integer that represents the current size of the array;
+        default_capacity: a constant integer that represents the default size of the array if no capacity is specified;
+    
 ## MyLinkedList.java
 ## MyList.java
         public interface MyList<T> {
