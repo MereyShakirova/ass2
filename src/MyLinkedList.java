@@ -28,6 +28,12 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
     public int size(){
         return size;
     }
+    public boolean add(T element){
+        Node newNode = new Node(element, null tail);
+        if(size==0){
+            head
+        }
+    }
 
     @Override
     public boolean contains(Object o) {
