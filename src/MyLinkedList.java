@@ -116,30 +116,37 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
         if(index == 0) {
         removedItem = (T) head.value;
         head = head.next;
-        }
-        else{
+        } else{
             Node<T> current = head;
             for(int i = 0; i < index - 1; i++) {
                 current = current.next;
             }
             removedItem = (T) current.next.value;
-            current = current.next;
+            current.next = current.next.next;
         }
-        removedItem = (T) current.next.value;
-        current.next = current.next.next;
-    }
-    size--;
-    return removedItem;
 
+        size--;
+        return removedItem;
+    }
 
     @Override
     public void clear() {
-
+        head = null;
+        size = 0;
     }
 
     @Override
     public Object get(int index) {
-        return null;
+        if(index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        Node<T> current = head;
+        for(int i = 0; i < index; i++) {
+            current = current.next;
+        }
+
+        return current.value;
     }
 
     @Override
