@@ -1,7 +1,6 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
-
-public class MyArrayList<T> implements  MyList {
+import java.util.Collections;
+public class MyArrayList<T> implements MyList {
     private T[] list;
     private int size;
     private int arraySize = 5;
@@ -25,22 +24,18 @@ public class MyArrayList<T> implements  MyList {
         }
         return false;
     }
-
     @Override
-    public void add(Object item) {
-
-    }
-
-    public  void add(Object item, int index){
+    public void add(Object item, int index) {
         if(size == arraySize){
             resize();
         }
-        for (int i = size; i > index; i--){
+        for(int i=size; i>index; i--){
             list[i] = list[i-1];
         }
         list[index] = (T) item;
         size++;
     }
+    @Override
     public boolean remove(Object item){
         if(item == null) return false;
         int index = indexOf(item);
