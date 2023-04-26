@@ -20,7 +20,21 @@ public class Main {
         myArrayList.sort();
         System.out.println(myArrayList);
         */
-
-
+        MyLinkedList<Integer> num = new MyLinkedList<>();
+        num.add(35);
+        num.add(3);
+        num.add(4);
+        num.add(7);
+        num.add(100);
+        num.add(2,5);
+        num.remove(0);
+        System.out.println(num.contains(35));
+        System.out.println(num.contains(3));
+        num.sort();
+        int index = 0;
+        while (index < num.size()){
+            System.out.println(num.get(index));
+            index++;
+        }
     }
 }
