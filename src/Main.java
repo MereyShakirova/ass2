@@ -12,6 +12,12 @@ public class Main {
         myArrayList.add(50);
         myArrayList.add(31);
         myArrayList.remove(6);
+        myArrayList.remove(46);
+        System.out.println(myArrayList.contains(47));
+        System.out.println(myArrayList.remove(myArrayList.indexOf(56)));
+        System.out.println(myArrayList);
+        myArrayList.sort();
+        System.out.println(myArrayList);
 
     }
 }
