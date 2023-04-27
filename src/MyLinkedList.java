@@ -207,4 +207,23 @@ public class MyLinkedList<T extends  Comparable<T>> implements MyList {
             last = current;
         } while (swapped);
     }
+    public void removeAll(Object o){
+        Node<T> previous = null;
+        Node<T> current = head;
+        while(current != null){
+            if(current.value.equals(o)){
+                if(previous == null){
+                    head = current.next;
+                }
+                else{
+                    previous.next = current.next;
+                }
+                size--;
+            } else{
+                previous = current;
+            }
+            current = current.next;
+        }
+    }
+
 }

@@ -13,5 +13,6 @@ public interface MyList<T> {
     int lastIndexOf(Object o);//Returns the index of the last occurrence of the specified element in the list, or -1 if the element was not found
 
     void sort();//sorts the elements in a list in ascending order based on their natural order. If the elements do not implement the Comparable interface, an exception will be thrown at run time
+
 }
 

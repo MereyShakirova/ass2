@@ -38,7 +38,6 @@ public class MyArrayList<T> implements MyList {
         }
         return false;
     }
-
     @Override
     public void add(Object item){//adds an element to the end of the list
         if(size == arraySize){
@@ -113,10 +112,18 @@ public class MyArrayList<T> implements MyList {
         return index;
     }
 
+//    @Override
+//    public void sort(){//sorts the elements of the list in ascending order using the natural ordering of the elements. The elements must implement the Comparable interface.
+//        Arrays.sort(list, 0, size);
+//    }
     @Override
-    public void sort(){//sorts the elements of the list in ascending order using the natural ordering of the elements. The elements must implement the Comparable interface.
-        Arrays.sort(list, 0, size);
+    public void sort() {
+        Arrays.sort(list, 3, 7, size);
     }
+//    @Override
+//    public Object sort(int index){
+//        Arrays.sort(list, index);
+//    }
     public <T extends Comparable<T>> int compare(T a, T o){// a private method used by the sort() method to compare two elements.
         return a.compareTo(o);
     }
@@ -134,6 +141,13 @@ public class MyArrayList<T> implements MyList {
     @Override
     public String toString() {
         return Arrays.toString(Arrays.copyOf(list, size));
+    }
+    public boolean removeAll(Object o){
+        boolean removed = false;
+        while(remove(o)) {
+            removed = true;
+        }
+        return removed;
     }
 }
 
