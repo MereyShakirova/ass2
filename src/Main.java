@@ -58,5 +58,7 @@ public class Main {
         System.out.println(linkedListStack.peek());//11
         System.out.println(linkedListStack.size());//3
 
+
+
     }
 }
