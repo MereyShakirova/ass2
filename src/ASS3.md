@@ -1,7 +1,7 @@
-# Assignment 3 for  laboratory work for the Algorithm Data Structure
+# **Assignment 3 for  laboratory work for the Algorithm Data Structure**
 ![Assignment 3](https://avatars.mds.yandex.net/i?id=cf6c6e5540c3601c2b4487c9f16936d041f0bdd3-9053088-images-thumbs&n=13)
-## Description:
-!(If the students haven't implemented their own MyLinkedList and MyArrayList classes, they can use the built-in LinkedList and ArrayList classes provided by Java.)!
+### Description:
+!(*If the students haven't implemented their own MyLinkedList and MyArrayList classes, they can use the built-in LinkedList and ArrayList classes provided by Java.*)!
 ## Main:
 ## **Stack implementation**
 
@@ -9,26 +9,26 @@
 
 ### In MyArrayListStack and MyLinkedListStack, the following tasks had to be done:
 
-    *1. Create a new class named MyLinkedListStack for the MyLinkedList implementation or MyArrayListStack for the MyArrayList implementation.*
+*1. Create a new class named MyLinkedListStack for the MyLinkedList implementation or MyArrayListStack for the MyArrayList implementation.*
     
-    *2. Import the necessary classes: java.util.EmptyStackException for the stack exceptions, and MyLinkedList or MyArrayList from the previous tasks.*
-    
-    *3. Declare an instance variable of type MyLinkedList or MyArrayList inside the class.*
-    
-    *4. Create a constructor for the class and initialize the instance variable.*
-    
-    *5. Implement the push method that adds an element to the top of the stack using the addFirst method for MyLinkedList or add method for MyArrayList.*
-    
-    *6. Implement the pop method that removes and returns the top element of the stack using the removeFirst method for MyLinkedList or remove method for MyArrayList.*
-    
-    *7. Implement the peek method that returns the top element of the stack without removing it using the getFirst method for MyLinkedList or get method for MyArrayList.*
-    
-    *8. Implement the isEmpty method that returns true if the stack is empty or false if it is not using the isEmpty method for MyLinkedList or MyArrayList.*
-    
-    *9. Implement the size method that returns the number of elements in the stack using the size method for MyLinkedList or MyArrayList.*
+*2. Import the necessary classes: java.util.EmptyStackException for the stack exceptions, and MyLinkedList or MyArrayList from the previous tasks.*
 
-## MyArrayListStack.java:
-### Here is the solution code:
+*3. Declare an instance variable of type MyLinkedList or MyArrayList inside the class.*
+    
+*4. Create a constructor for the class and initialize the instance variable.*
+    
+*5. Implement the push method that adds an element to the top of the stack using the addFirst method for MyLinkedList or add method for MyArrayList.*
+    
+*6. Implement the pop method that removes and returns the top element of the stack using the removeFirst method for MyLinkedList or remove method for MyArrayList.*
+    
+*7. Implement the peek method that returns the top element of the stack without removing it using the getFirst method for MyLinkedList or get method for MyArrayList.*
+    
+*8. Implement the isEmpty method that returns true if the stack is empty or false if it is not using the isEmpty method for MyLinkedList or MyArrayList.*
+    
+*9. Implement the size method that returns the number of elements in the stack using the size method for MyLinkedList or MyArrayList.*
+
+### MyArrayListStack.java:
+#### Here is the solution code:
         import java.util.ArrayList;
         import java.util.EmptyStackException;
         public class MyArrayListStack<T> {
@@ -62,8 +62,8 @@
 
 
 
-## MyLinkedListStack.java:
-### Here is the solution code:
+### MyLinkedListStack.java:
+#### Here is the solution code:
         import java.util.EmptyStackException;
         import java.util.LinkedList;
         public class MyLinkedListStack<T> {
@@ -119,9 +119,11 @@
 *9. Implement the size method that returns the number of elements in the queue using the size method for MyLinkedList or MyArrayList.*
 
 ### MyArrayListQueque.java:
+#### Here is the solution code:
 
 
 
 
-## MyLinkedListQueque.java:
+### MyLinkedListQueque.java:
+#### Here is the solution code:
 
