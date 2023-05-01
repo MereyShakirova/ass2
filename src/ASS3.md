@@ -28,7 +28,7 @@
 *9. Implement the size method that returns the number of elements in the stack using the size method for MyLinkedList or MyArrayList.*
 
 ### MyArrayListStack.java:
-#### Here is the solution code:
+#### *Here is the solution code*:
         import java.util.ArrayList;
         import java.util.EmptyStackException;
         public class MyArrayListStack<T> {
@@ -63,7 +63,7 @@
 
 
 ### MyLinkedListStack.java:
-#### Here is the solution code:
+#### *Here is the solution code*:
         import java.util.EmptyStackException;
         import java.util.LinkedList;
         public class MyLinkedListStack<T> {
@@ -119,11 +119,72 @@
 *9. Implement the size method that returns the number of elements in the queue using the size method for MyLinkedList or MyArrayList.*
 
 ### MyArrayListQueque.java:
-#### Here is the solution code:
+#### *Here is the solution code*:
+    import java.util.ArrayList;
+    import java.util.NoSuchElementException;
+    public class MyArrayListQueque<T> {
+        private ArrayList<T> queue;
+        public MyArrayListQueque() {
+            queue = new ArrayList<>();
+        }
+        public void enqueue(T element){
+            queue.add(element);
+        }
+        public T dequeue(){
+            if(queue.isEmpty()){
+                throw new NoSuchElementException();
+        }
+            return queue.remove(0);
+        }
+        public T peek() {
+            if(queue.isEmpty()){
+                throw new NoSuchElementException();
+        }
+            return queue.get(0);
+        }
+        public boolean isEmpty(){
+            return queue.isEmpty();
+        }
+        public int size(){
+            return queue.size();
+        }
+        
+    }
+
 
 
 
 
 ### MyLinkedListQueque.java:
-#### Here is the solution code:
+#### *Here is the solution code*:
+    import java.util.LinkedList;
+    import java.util.NoSuchElementException;
+    public class MyLinkedListQueque<T> {
+        private LinkedList<T> queue;
+        public MyLinkedListQueque() {
+            queue = new LinkedList<>();
+        }
+        public void enqueue(T element){
+            queue.addLast(element);
+        }
+        public T dequeue() {
+            if(queue.isEmpty()){
+                throw new NoSuchElementException();
+        }
+            return queue.removeFirst();
+        }
+        public T peek(){
+            if(queue.isEmpty()){
+                throw new NoSuchElementException();
+        }
+            return queue.getFirst();
+        }
+        public boolean isEmpty(){
+            return queue.isEmpty();
+        }
+        public int size(){
+            return queue.size();
+        }
+    }
+
 
