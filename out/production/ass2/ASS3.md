@@ -2,7 +2,9 @@
 ![Assignment 3](https://avatars.mds.yandex.net/i?id=cf6c6e5540c3601c2b4487c9f16936d041f0bdd3-9053088-images-thumbs&n=13)
 ### Description:
 !(*If the students haven't implemented their own MyLinkedList and MyArrayList classes, they can use the built-in LinkedList and ArrayList classes provided by Java.*)!
-## Main:
+## Main class:
+*In Main class I tested the code with different way, like push, pop and so on to test, prove the code*
+#### *Here is the test code:*
 ## **Stack implementation**
 
 ![Assignment 3](https://avatars.mds.yandex.net/i?id=99a1593845e819a1ebfec4fd9732229a78c4fbbd-7550039-images-thumbs&n=13)
@@ -28,24 +30,29 @@
 *9. Implement the size method that returns the number of elements in the stack using the size method for MyLinkedList or MyArrayList.*
 
 ### MyArrayListStack.java:
+#### *Explanation:*
+
+Firstly, I created a stack class using MyArrayList for implementation. Then I am importing java.util.EmptyStackException since I will be using this exception to throw when the stack is empty. I declared a variable MyArrayList. Thirdly, created a constructor for the class and initialize the instance variable. In the last, I implemented push, pop, peek, isEmpty, size. Then at the end, using the Main class, I tested the code for class MyArrayListStack.
+
 #### *Here is the solution code*:
         import java.util.ArrayList;
         import java.util.EmptyStackException;
         public class MyArrayListStack<T> {
-            private ArrayList<T> stack;
+        private ArrayList<T> stack;
             public MyArrayListStack() {
-            stack =new ArrayList<>();
+                stack =new ArrayList<>();
             }
             public void push(T element){
-            stack.add(element);
+                stack.add(element);
             }
-            public T pop(int i){
+    
+            public T pop(){
                 if(stack.isEmpty()) {
                     throw new EmptyStackException();
                 }
                 return stack.remove(stack.size() - 1);
             }
-            public T peek(int i){
+            public T peek(){
                 if(stack.isEmpty()){
                     throw new EmptyStackException();
                 }
@@ -57,42 +64,46 @@
             public int size() {
                 return stack.size();
             }
-        
+
         }
 
 
 
 ### MyLinkedListStack.java:
+#### *Explanation:*
+
+Firstly, I created a stack class using MyLinkedList for implementation. Then I am importing java.util.EmptyStackException since I will be using this exception to throw when the stack is empty. I declared a variable MyLinkedList. Thirdly, created a constructor for the class and initialize the instance variable. In the last, I implemented push, pop, peek, isEmpty, size. Then at the end, using the Main class, I tested the code for class MyLinkedListStack.
+
 #### *Here is the solution code*:
         import java.util.EmptyStackException;
         import java.util.LinkedList;
         public class MyLinkedListStack<T> {
-            private LinkedList<T> list;
+        private LinkedList<T> stack;
             public MyLinkedListStack(){
-                list = new LinkedList<>();
+                stack = new LinkedList<>();
             }
             public void push(T element) {
-                list.addFirst(element);
+                stack.addFirst(element);
             }
             public T pop(){
-                if(list.isEmpty()){
+                if(stack.isEmpty()){
                     throw new EmptyStackException();
                 }
-                return list.removeFirst();
+                return stack.removeFirst();
             }
             public T peek(){
-                if(list.isEmpty()){
+                if(stack.isEmpty()){
                     throw new EmptyStackException();
-                }
-                return list.getFirst();
+            }
+                return stack.getFirst();
             }
             public boolean isEmpty(){
-                return list.isEmpty();
+                return stack.isEmpty();
             }
             public int size(){
-                return list.size();
+                return stack.size();
             }
-        
+            
         }
 
 
@@ -150,8 +161,6 @@
         }
         
     }
-
-
 
 
 

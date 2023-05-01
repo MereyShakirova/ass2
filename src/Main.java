@@ -37,7 +37,7 @@ public class Main {
         while (index < num.size()) {
             System.out.println(num.get(index));
             index++;*/
-
+        System.out.println("Testing MyArrayListStack:");
         MyArrayListStack<Integer> arrayListStack = new MyArrayListStack<>();
         arrayListStack.push(11);
         arrayListStack.push(21);
@@ -46,7 +46,7 @@ public class Main {
         System.out.println(arrayListStack.peek());//21
         System.out.println(arrayListStack.size());//2
 
-
+        System.out.println("Testing MyLinkedListStack:");
         MyLinkedListStack<Integer> linkedListStack =  new MyLinkedListStack<>();
         linkedListStack.push(4);
         linkedListStack.push(5);
@@ -59,6 +59,30 @@ public class Main {
         System.out.println(linkedListStack.size());//3
 
 
+        System.out.println("Testing MyArrayListQueque:");
+        MyArrayListQueque<String> myArrayListQueque = new MyArrayListQueque<>();
+        myArrayListQueque.enqueue("qwerty");
+        myArrayListQueque.enqueue("asdfg");
+        myArrayListQueque.enqueue("zxcvb");
+        System.out.println(myArrayListQueque.isEmpty());//false
+        System.out.println(myArrayListQueque.size());//3
+        System.out.println(myArrayListQueque.peek());//qwerty
+        System.out.println(myArrayListQueque.dequeue());//qwerty
 
+
+        System.out.println("Testing MyArrayListQueque:");
+        MyLinkedListQueque<String> myLinkedListQueque = new MyLinkedListQueque<>();
+        myLinkedListQueque.enqueue("Gryffindor");
+        myLinkedListQueque.enqueue("Slytherin");
+        myLinkedListQueque.enqueue("Hufflepuff");
+        myLinkedListQueque.enqueue("Ravenclaw");
+        System.out.println(myLinkedListQueque.isEmpty());//false
+        System.out.println(myLinkedListQueque.size());//4
+        System.out.println(myLinkedListQueque.peek());//Gryffindor
+        System.out.println(myLinkedListQueque.dequeue());//Gryffindor
+        System.out.println(myLinkedListQueque.dequeue());//Slytherin
+        System.out.println(myLinkedListQueque.dequeue());//Hufflepuff
+        System.out.println(myLinkedListQueque.dequeue());//Ravenclaw
+        System.out.println(myLinkedListQueque.isEmpty());//true
     }
 }
