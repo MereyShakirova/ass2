@@ -2,9 +2,7 @@
 ![Assignment 3](https://avatars.mds.yandex.net/i?id=cf6c6e5540c3601c2b4487c9f16936d041f0bdd3-9053088-images-thumbs&n=13)
 ### Description:
 !(*If the students haven't implemented their own MyLinkedList and MyArrayList classes, they can use the built-in LinkedList and ArrayList classes provided by Java.*)!
-## Main class:
-*In Main class I tested the code with different way, like push, pop and so on to test, prove the code*
-#### *Here is the test code:*
+
 ## **Stack implementation**
 
 ![Assignment 3](https://avatars.mds.yandex.net/i?id=99a1593845e819a1ebfec4fd9732229a78c4fbbd-7550039-images-thumbs&n=13)
@@ -130,6 +128,10 @@ Firstly, I created a stack class using MyLinkedList for implementation. Then I a
 *9. Implement the size method that returns the number of elements in the queue using the size method for MyLinkedList or MyArrayList.*
 
 ### MyArrayListQueque.java:
+#### *Explanation:*
+
+The MyArrayListQueue class uses generics to allow elements of any type to be used in the queue. The MyArrayListQueue class implements a stack. The MyArrayListQueue class uses the add method to add an element to the end of the queue, and the remove method at index 0 to remove an element from the head of the queue. The peek method is implemented similarly to the stack implementation. The isEmpty and size methods are also implemented. MyArrayListQueue throws a NoSuchElementException if dequeuing or browsing is called on an empty queue.
+
 #### *Here is the solution code*:
     import java.util.ArrayList;
     import java.util.NoSuchElementException;
@@ -165,6 +167,10 @@ Firstly, I created a stack class using MyLinkedList for implementation. Then I a
 
 
 ### MyLinkedListQueque.java:
+#### *Explanation:*
+
+Firstly, I created a MyLinkedListQueue class that uses generics to allow any type of element in the queue and implements a stack. Then I imported java.util.EmptyElementException since I will be using this exception to throw when the stack is empty. I declared a variable MyLinkedList. Thirdly, created a constructor for the class and initialized the instance variable. In the latter, I implemented push, pop, peek, isEmpty, size. Then, at the end, using the Main class, I tested the MyLinkedQueque class code.
+
 #### *Here is the solution code*:
     import java.util.LinkedList;
     import java.util.NoSuchElementException;
@@ -195,5 +201,61 @@ Firstly, I created a stack class using MyLinkedList for implementation. Then I a
             return queue.size();
         }
     }
+
+## Main class:
+*In Main class I tested the code with different way, like push, pop and so on to test, prove the code*
+#### *Here is the test code:*
+        public class Main {
+        public static void main(String[] args) {
+                
+                System.out.println("Testing MyArrayListStack:");
+                MyArrayListStack<Integer> arrayListStack = new MyArrayListStack<>();
+                arrayListStack.push(11);
+                arrayListStack.push(21);
+                arrayListStack.push(31);
+                System.out.println(arrayListStack.pop());//31
+                System.out.println(arrayListStack.peek());//21
+                System.out.println(arrayListStack.size());//2
+        
+                System.out.println("Testing MyLinkedListStack:");
+                MyLinkedListStack<Integer> linkedListStack =  new MyLinkedListStack<>();
+                linkedListStack.push(4);
+                linkedListStack.push(5);
+                linkedListStack.push(11);
+                linkedListStack.push(7);
+                System.out.println(linkedListStack.pop());//7
+                linkedListStack.push(13);
+                System.out.println(linkedListStack.pop());//13
+                System.out.println(linkedListStack.peek());//11
+                System.out.println(linkedListStack.size());//3
+        
+        
+                System.out.println("Testing MyArrayListQueque:");
+                MyArrayListQueque<String> myArrayListQueque = new MyArrayListQueque<>();
+                myArrayListQueque.enqueue("qwerty");
+                myArrayListQueque.enqueue("asdfg");
+                myArrayListQueque.enqueue("zxcvb");
+                System.out.println(myArrayListQueque.isEmpty());//false
+                System.out.println(myArrayListQueque.size());//3
+                System.out.println(myArrayListQueque.peek());//qwerty
+                System.out.println(myArrayListQueque.dequeue());//qwerty
+        
+        
+                System.out.println("Testing MyArrayListQueque:");
+                MyLinkedListQueque<String> myLinkedListQueque = new MyLinkedListQueque<>();
+                myLinkedListQueque.enqueue("Gryffindor");
+                myLinkedListQueque.enqueue("Slytherin");
+                myLinkedListQueque.enqueue("Hufflepuff");
+                myLinkedListQueque.enqueue("Ravenclaw");
+                System.out.println(myLinkedListQueque.isEmpty());//false
+                System.out.println(myLinkedListQueque.size());//4
+                System.out.println(myLinkedListQueque.peek());//Gryffindor
+                System.out.println(myLinkedListQueque.dequeue());//Gryffindor
+                System.out.println(myLinkedListQueque.dequeue());//Slytherin
+                System.out.println(myLinkedListQueque.dequeue());//Hufflepuff
+                System.out.println(myLinkedListQueque.dequeue());//Ravenclaw
+                System.out.println(myLinkedListQueque.isEmpty());//true
+            }
+        }
 
 
