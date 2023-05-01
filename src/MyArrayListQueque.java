@@ -1,8 +1,7 @@
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.NoSuchElementException;
 public class MyArrayListQueque<T> {
-    private LinkedList<T> queque;
+    private ArrayList<T> queque;
     public MyArrayListQueque() {
         queque = new ArrayList<>();
     }
