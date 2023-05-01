@@ -19,7 +19,10 @@ public class MyArrayListStack<T> {
         if(stack.isEmpty()){
             throw new EmptyStackException();
         }
-        return stack.remove(stack.size()+1);
+        return stack.get(stack.size()-1);
+    }
+    public boolean isEmpty(){
+        return stack.isEmpty();
     }
 
 }
