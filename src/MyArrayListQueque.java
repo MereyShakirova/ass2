@@ -14,6 +14,17 @@ public class MyArrayListQueque<T> {
         }
         return queque.remove(0);
     }
-
+    public T peek() {
+        if(queque.isEmpty()){
+            throw new NoSuchElementException();
+        }
+        return queque.get(0);
+    }
+    public boolean isEmpty(){
+        return queque.isEmpty();
+    }
+    public int size(){
+        return queque.size();
+    }
 
 }
