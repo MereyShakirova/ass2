@@ -15,6 +15,11 @@ public class MyArrayListStack<T> {
         }
         return stack.remove(stack.size() - 1);
     }
-
+    public T peek(){
+        if(stack.isEmpty()){
+            throw new EmptyStackException();
+        }
+        return stack.remove(stack.size()+1);
+    }
 
 }
