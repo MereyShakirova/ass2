@@ -1,11 +1,11 @@
 # Assignment 3 for  laboratory work for the Algorithm Data Structure
-![Assignment 3](https://avatars.mds.yandex.net/i?id=85c7a1aec44a18feaf285883e555bc5800eb8003-8496986-images-thumbs&n=13)
-## !Description!:
-If the students haven't implemented their own MyLinkedList and MyArrayList classes, they can use the built-in LinkedList and ArrayList classes provided by Java.
+![Assignment 3](https://avatars.mds.yandex.net/i?id=cf6c6e5540c3601c2b4487c9f16936d041f0bdd3-9053088-images-thumbs&n=13)
+## Description:
+!(If the students haven't implemented their own MyLinkedList and MyArrayList classes, they can use the built-in LinkedList and ArrayList classes provided by Java.)!
 ## Main:
 ## **Stack implementation**
 
-![Assignment 3](https://avatars.mds.yandex.net/i?id=c1142db1a87d85e3f851a89666910ffb-5869069-images-thumbs&n=13)
+![Assignment 3](https://avatars.mds.yandex.net/i?id=99a1593845e819a1ebfec4fd9732229a78c4fbbd-7550039-images-thumbs&n=13)
 
 ### In MyArrayListStack and MyLinkedListStack, the following tasks had to be done:
 
@@ -97,6 +97,7 @@ If the students haven't implemented their own MyLinkedList and MyArrayList class
 
 
 ## **Queue Implementation**
+![Assignment 3](https://tse3.mm.bing.net/th?id=OIP.ojQqXtfstcULPnw1aAaapgHaEK&pid=15.1)
 ### In MyArrayListQueue and MyLinkedListQueue the following tasks had to be done:
 
 *1. Create a new class named MyLinkedListQueue for the MyLinkedList implementation or MyArrayListQueue for the MyArrayList implementation.*
