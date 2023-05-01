@@ -42,15 +42,21 @@ public class Main {
         arrayListStack.push(11);
         arrayListStack.push(21);
         arrayListStack.push(31);
-        System.out.println(arrayListStack.pop());
-        System.out.println(arrayListStack.peek());
-        System.out.println(arrayListStack.size());
+        System.out.println(arrayListStack.pop());//31
+        System.out.println(arrayListStack.peek());//21
+        System.out.println(arrayListStack.size());//2
 
 
-//        MyLinkedListStack<Integer> stack1 =  new MyLinkedListStack<>();
-//        stack1.push(4);
-//        stack1.push(5);
-//        stack1.push(11);
+        MyLinkedListStack<Integer> linkedListStack =  new MyLinkedListStack<>();
+        linkedListStack.push(4);
+        linkedListStack.push(5);
+        linkedListStack.push(11);
+        linkedListStack.push(7);
+        System.out.println(linkedListStack.pop());//7
+        linkedListStack.push(13);
+        System.out.println(linkedListStack.pop());//13
+        System.out.println(linkedListStack.peek());//11
+        System.out.println(linkedListStack.size());//3
 
     }
 }
