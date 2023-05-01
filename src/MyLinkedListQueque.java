@@ -20,4 +20,10 @@ public class MyLinkedListQueque<T> {
         }
         return queque.getFirst();
     }
+    public boolean isEmpty(){
+        return queque.isEmpty();
+    }
+    public int size(){
+        return queque.size();
+    }
 }
