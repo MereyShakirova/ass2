@@ -45,6 +45,13 @@ public class Main {
         stack.push(2);
         stack.push(3);
         stack.push(4);
+        stack.peek(3);
+
+
+        MyLinkedListStack<Integer> stack1 =  new MyLinkedListStack<>();
+        stack1.push(4);
+        stack1.push(5);
+        stack1.push(11);
 
     }
 }

@@ -9,19 +9,19 @@ public class MyArrayListStack<T> {
         stack.add(element);
     }
 
-    public T pop(){
+    public T pop(int i){
         if(stack.isEmpty()) {
             throw new EmptyStackException();
         }
         return stack.remove(stack.size() - 1);
     }
-    public T peek(){
+    public T peek(int i){
         if(stack.isEmpty()){
             throw new EmptyStackException();
         }
         return stack.get(stack.size()-1);
     }
-    public boolean isEmpty(){
+    public boolean isEmpty(int T){
         return stack.isEmpty();
     }
     public int size() {
