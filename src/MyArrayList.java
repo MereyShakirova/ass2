@@ -112,13 +112,9 @@ public class MyArrayList<T> implements MyList {
         return index;
     }
 
-//    @Override
-//    public void sort(){//sorts the elements of the list in ascending order using the natural ordering of the elements. The elements must implement the Comparable interface.
-//        Arrays.sort(list, 0, size);
-//    }
     @Override
-    public void sort() {
-        Arrays.sort(list, 3, 7, size);
+    public void sort(){//sorts the elements of the list in ascending order using the natural ordering of the elements. The elements must implement the Comparable interface.
+        Arrays.sort(list, 0, size);
     }
 //    @Override
 //    public Object sort(int index){
