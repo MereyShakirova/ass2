@@ -1,7 +1,5 @@
-import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
        /* MyArrayList<Integer> myArrayList = new MyArrayList<>();
 
         myArrayList.add(45);
@@ -40,18 +38,19 @@ public class Main {
             System.out.println(num.get(index));
             index++;*/
 
-        MyArrayListStack<Integer> stack = new MyArrayListStack<>();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-        stack.peek(3);
+        MyArrayListStack<Integer> arrayListStack = new MyArrayListStack<>();
+        arrayListStack.push(11);
+        arrayListStack.push(21);
+        arrayListStack.push(31);
+        System.out.println(arrayListStack.pop());
+        System.out.println(arrayListStack.peek());
+        System.out.println(arrayListStack.size());
 
 
-        MyLinkedListStack<Integer> stack1 =  new MyLinkedListStack<>();
-        stack1.push(4);
-        stack1.push(5);
-        stack1.push(11);
+//        MyLinkedListStack<Integer> stack1 =  new MyLinkedListStack<>();
+//        stack1.push(4);
+//        stack1.push(5);
+//        stack1.push(11);
 
     }
 }
