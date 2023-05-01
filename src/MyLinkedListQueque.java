@@ -5,4 +5,19 @@ public class MyLinkedListQueque<T> {
     public MyLinkedListQueque() {
         queque = new LinkedList<>();
     }
+    public void enqueque(T element){
+        queque.addLast(element);
+    }
+    public T dequeque() {
+        if(queque.isEmpty()){
+            throw new NoSuchElementException();
+        }
+        return queque.removeFirst();
+    }
+    public T peek(){
+        if(queque.isEmpty()){
+            throw new NoSuchElementException();
+        }
+        return queque.getFirst();
+    }
 }
