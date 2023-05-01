@@ -2,7 +2,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        MyArrayList<Integer> myArrayList = new MyArrayList<>();
+       /* MyArrayList<Integer> myArrayList = new MyArrayList<>();
 
         myArrayList.add(45);
         myArrayList.add(46);
@@ -23,7 +23,7 @@ public class Main {
 //        myArrayList.sort();
 //        System.out.println(myArrayList);
 
- /*       MyLinkedList<Integer> num = new MyLinkedList<>();
+       MyLinkedList<Integer> num = new MyLinkedList<>();
         num.add(35);
         num.add(3);
         num.add(4);
@@ -38,8 +38,13 @@ public class Main {
         int index = 0;
         while (index < num.size()) {
             System.out.println(num.get(index));
-            index++;
-*/
-        }
+            index++;*/
+
+        MyArrayListStack<Integer> stack = new MyArrayListStack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+
     }
 }

@@ -1,30 +1,30 @@
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 public class MyArrayListQueque<T> {
-    private ArrayList<T> queque;
+    private ArrayList<T> queue;
     public MyArrayListQueque() {
-        queque = new ArrayList<>();
+        queue = new ArrayList<>();
     }
-    public void enqueque(T element){
-        queque.add(element);
+    public void enqueue(T element){
+        queue.add(element);
     }
-    public T dequeque(){
-        if(queque.isEmpty()){
+    public T dequeue(){
+        if(queue.isEmpty()){
             throw new NoSuchElementException();
         }
-        return queque.remove(0);
+        return queue.remove(0);
     }
     public T peek() {
-        if(queque.isEmpty()){
+        if(queue.isEmpty()){
             throw new NoSuchElementException();
         }
-        return queque.get(0);
+        return queue.get(0);
     }
     public boolean isEmpty(){
-        return queque.isEmpty();
+        return queue.isEmpty();
     }
     public int size(){
-        return queque.size();
+        return queue.size();
     }
 
 }

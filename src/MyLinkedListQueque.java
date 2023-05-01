@@ -1,29 +1,29 @@
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 public class MyLinkedListQueque<T> {
-    private LinkedList<T> queque;
+    private LinkedList<T> queue;
     public MyLinkedListQueque() {
-        queque = new LinkedList<>();
+        queue = new LinkedList<>();
     }
-    public void enqueque(T element){
-        queque.addLast(element);
+    public void enqueue(T element){
+        queue.addLast(element);
     }
-    public T dequeque() {
-        if(queque.isEmpty()){
+    public T dequeue() {
+        if(queue.isEmpty()){
             throw new NoSuchElementException();
         }
-        return queque.removeFirst();
+        return queue.removeFirst();
     }
     public T peek(){
-        if(queque.isEmpty()){
+        if(queue.isEmpty()){
             throw new NoSuchElementException();
         }
-        return queque.getFirst();
+        return queue.getFirst();
     }
     public boolean isEmpty(){
-        return queque.isEmpty();
+        return queue.isEmpty();
     }
     public int size(){
-        return queque.size();
+        return queue.size();
     }
 }
