@@ -4,7 +4,7 @@
 !(*If the students haven't implemented their own MyLinkedList and MyArrayList classes, they can use the built-in LinkedList and ArrayList classes provided by Java.*)!
 ## Main class:
 *In Main class I tested the code with different way, like push, pop and so on to test, prove the code*
-#### *Here is test code:*
+#### *Here is the test code:*
 ## **Stack implementation**
 
 ![Assignment 3](https://avatars.mds.yandex.net/i?id=99a1593845e819a1ebfec4fd9732229a78c4fbbd-7550039-images-thumbs&n=13)
@@ -30,6 +30,10 @@
 *9. Implement the size method that returns the number of elements in the stack using the size method for MyLinkedList or MyArrayList.*
 
 ### MyArrayListStack.java:
+#### *Explanation:*
+
+Firstly, I created a stack class using MyArrayList for implementation. Then I am importing java.util.EmptyStackException since I will be using this exception to throw when the stack is empty. I declared a variable MyArrayList. Thirdly, created a constructor for the class and initialize the instance variable. In the last, I implemented push, pop, peek, isEmpty, size. Then at the end, using the Main class, I tested the code for class MyArrayListStack.
+
 #### *Here is the solution code*:
         import java.util.ArrayList;
         import java.util.EmptyStackException;
@@ -66,6 +70,10 @@
 
 
 ### MyLinkedListStack.java:
+#### *Explanation:*
+
+Firstly, I created a stack class using MyLinkedList for implementation. Then I am importing java.util.EmptyStackException since I will be using this exception to throw when the stack is empty. I declared a variable MyLinkedList. Thirdly, created a constructor for the class and initialize the instance variable. In the last, I implemented push, pop, peek, isEmpty, size. Then at the end, using the Main class, I tested the code for class MyLinkedListStack.
+
 #### *Here is the solution code*:
         import java.util.EmptyStackException;
         import java.util.LinkedList;
@@ -153,8 +161,6 @@
         }
         
     }
-
-
 
 
 
